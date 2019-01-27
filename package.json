@@ -2,7 +2,16 @@
   "name": "vue-prokrutchik",
   "version": "1.0.2",
   "description": "Vue wrapper for Prokrutchik",
-  "author": "@bespoyasov",
+  "author": {
+    "name": "Alex Bespoyasov",
+    "email": "bespoyasov@me.com",
+    "url": "https://bespoyasov.ru"
+  },
+  "homepage": "https://github.com/bespoyasov/vue-prokrutchik",
+  "bugs": {
+    "url": "https://github.com/bespoyasov/vue-prokrutchik/issues",
+    "email": "bespoyasov@me.com"
+  },
   "main": "dist/vue-prokrutchik.umd.js",
   "module": "dist/vue-prokrutchik.esm.js",
   "unpkg": "dist/vue-prokrutchik.min.js",
