@@ -23,15 +23,14 @@
   ],
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/vue-prokrutchik.umd.js",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/vue-prokrutchik.esm.js",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/vue-prokrutchik.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-prokrutchik.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-prokrutchik.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-prokrutchik.min.js"
   },
   "peerDependencies": {
     "prokrutchik": "^3.0.1"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
     "minimist": "^1.2.0",
     "node-sass": "^4.12.0",
     "rollup": "^0.67.4",
