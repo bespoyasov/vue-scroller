@@ -22,6 +22,7 @@
     "./style.css": "./style.css"
   },
   "files": [
+    "vue-scroller.vue",
     "vue-scroller.es.js",
     "vue-scroller.umd.js",
     "vue-scroller.d.ts",
