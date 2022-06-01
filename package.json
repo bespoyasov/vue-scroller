@@ -14,6 +14,7 @@
   "type": "module",
   "module": "vue-scroller.js",
   "browser": "vue-scroller.browser.js",
+  "style": "vue-scroller.css",
   "exports": {
     ".": "./vue-scroller.js",
     "./package.json": "./package.json",
