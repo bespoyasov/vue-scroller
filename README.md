@@ -49,10 +49,6 @@ export default {
 </template>
 ```
 
-## More settings
+## Configuration
 
-Check out [original script settings](https://github.com/bespoyasov/scroller#settings) for more customisation.
-
-## Help
-
-If you have any questions send an email to [bespoyasov@me.com](mailto:bespoyasov@me.com).
+For more configuration options, check out [Scroller settings](https://github.com/bespoyasov/scroller#configuration).
