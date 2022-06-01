@@ -11,6 +11,7 @@
   ],
   "author": "Alex Bespoyasov <bespoyasov@me.com>",
   "repository": "bespoyasov/vue-scroller",
+  "type": "module",
   "module": "vue-scroller.js",
   "browser": "vue-scroller.browser.js",
   "exports": {
