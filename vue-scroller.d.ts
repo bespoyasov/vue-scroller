@@ -1,4 +1,4 @@
-declare module "vue-scroller" {
+declare module "vue-prokrutchik" {
   import * as Vue from "vue";
   import * as ScrollerBase from "prokrutchik";
 
