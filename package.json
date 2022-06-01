@@ -22,10 +22,9 @@
     "src/*"
   ],
   "scripts": {
-    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "rollup --format umd --file dist/vue-prokrutchik.umd.js",
-    "build:es": "rollup --format es --file dist/vue-prokrutchik.esm.js",
-    "build:unpkg": "rollup --format iife --file dist/vue-prokrutchik.min.js"
+    "build": "npm run build:browser & npm run build:module",
+    "build:module": "rollup --format es --file vue-scroller.js",
+    "build:browser": "rollup --format iife --file vue-scroller.browser.js"
   },
   "peerDependencies": {
     "prokrutchik": "^3.0.1"
