@@ -9,16 +9,8 @@
     "drag-n-drop",
     "vue"
   ],
-  "author": {
-    "name": "Alex Bespoyasov",
-    "email": "bespoyasov@me.com",
-    "url": "https://bespoyasov.ru"
-  },
-  "homepage": "https://github.com/bespoyasov/vue-prokrutchik",
-  "bugs": {
-    "url": "https://github.com/bespoyasov/vue-prokrutchik/issues",
-    "email": "bespoyasov@me.com"
-  },
+  "author": "Alex Bespoyasov <bespoyasov@me.com>",
+  "repository": "bespoyasov/vue-scroller",
   "main": "dist/vue-prokrutchik.umd.js",
   "module": "dist/vue-prokrutchik.esm.js",
   "unpkg": "dist/vue-prokrutchik.min.js",
