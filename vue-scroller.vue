@@ -1,41 +1,91 @@
-<template>
-  <div class="ab_scroller">
-    <div class="ab_scroller-wrapper">
-      <div class="ab_scroller-border ab_scroller-border--left"></div>
-      <div class="ab_scroller-border ab_scroller-border--right"></div>
-      <div class="ab_scroller-strip">
-        <slot></slot>
-      </div>
-
-      <div class="ab_scroller-scrollwrap">
-        <div class="ab_scroller-scrollbar"></div>
-      </div>
-      <div class="ab_scroller-anchors"></div>
-    </div>
-  </div>
-</template>
+<style scoped>
+@import "prokrutchik/styles.css";
+</style>
 
 <script>
-import "prokrutchik";
+import { h } from "vue";
+import { Scroller } from "prokrutchik";
 
 export default {
   props: {
-    config: {
-      type: Object,
-      default: () => ({})
-    }
+    position: [String, Number],
+    duration: Number,
+    scrollbar: String,
+    navigation: String,
+    align: String,
+    onItemClick: Function,
+  },
+  computed: {
+    config() {
+      return {
+        scrollbar: this.scrollbar,
+        navigation: this.navigation,
+        align: this.align,
+        onItemClick: this.onItemClick,
+      };
+    },
   },
   mounted() {
-    this.scroller = new Scroller({
-      el: this.$el,
-      useOuterHtml: true,
-      ...this.config
+    this.instance ??= new Scroller({
+      element: this.$el,
+      useExternalLayout: true,
+
+      startPosition: this.position,
+      startDuration: this.duration,
+      ...this.config,
     });
   },
+  watch: {
+    position(newPosition) {
+      this.instance?.scrollTo(newPosition, this.duration);
+    },
+  },
   updated() {
-    this.scroller.update({ ...this.config });
-  }
+    this.instance?.update({ ...this.config });
+  },
+  render() {
+    function isFragment({ el, type, children }) {
+      return !el && typeof type === "symbol" && Array.isArray(children) && !!children.length;
+    }
+
+    const items = [];
+
+    this.$slots.default().forEach((t) => {
+      if (isFragment(t)) items.push(...t.children);
+      else items.push(t);
+    });
+
+    return h("article", [
+      h(
+        "div",
+        { class: "scroller-container" },
+        h(
+          "ul",
+          { class: "scroller-content" },
+          items.map((child) =>
+            h(
+              "li",
+              {
+                class: "scroller-item",
+                "data-anchor": child.props?.["data-anchor"],
+              },
+              child
+            )
+          )
+        )
+      ),
+      h("div", { class: "scroller-scrollbar" }, h("div", { class: "scroller-handle" })),
+      h(
+        "footer",
+        { class: "scroller-navigation" },
+        items.map((child) => {
+          const id = child.props?.["data-anchor"];
+          return id
+            ? h("button", { class: "scroller-button", "data-id": id, type: "button" }, id)
+            : null;
+        })
+      ),
+    ]);
+  },
 };
 </script>
-
-<style src="../node_modules/prokrutchik/build/styles-min.css" />
