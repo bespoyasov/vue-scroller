@@ -1,10 +1,10 @@
-# vue-prokrutchik
+# Vue Scroller
 
-Vue wrapper for [Prokrutchik](https://github.com/bespoyasov/scroller).
+Vue wrapper component for [Scroller](https://github.com/bespoyasov/scroller).
 
 ## Installation
 
-`npm install vue-prokrutchik --save`
+`npm install prokrutchik vue-prokrutchik`
 
 ## Usage
 
