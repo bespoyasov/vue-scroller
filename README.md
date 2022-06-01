@@ -47,6 +47,10 @@ export default {
     <div class="item" data-anchor="Third">Third Item</div>
   </scroller>
 </template>
+
+<style>
+  @import "vue-prokrutchik/style.css";
+</style>
 ```
 
 ## Configuration
