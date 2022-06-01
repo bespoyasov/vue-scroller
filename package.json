@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "prokrutchik": "^3.0.1",
-    "vue": "^2.6.10"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "minimist": "^1.2.0",
