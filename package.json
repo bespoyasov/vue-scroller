@@ -37,7 +37,7 @@
     "vue": "^3.2.36"
   },
   "devDependencies": {
-    "rollup": "^0.67.4",
-    "rollup-plugin-vue": "4.3.2"
+    "rollup": "^2.75.5",
+    "rollup-plugin-vue": "^6.0.0"
   }
 }
