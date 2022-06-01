@@ -2,6 +2,13 @@
   "name": "vue-prokrutchik",
   "version": "1.0.3",
   "description": "Vue wrapper for Prokrutchik",
+  "keywords": [
+    "scroller",
+    "scroll",
+    "drag",
+    "drag-n-drop",
+    "vue"
+  ],
   "author": {
     "name": "Alex Bespoyasov",
     "email": "bespoyasov@me.com",
