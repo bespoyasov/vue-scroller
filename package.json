@@ -18,8 +18,10 @@
     "./sfc": "src/vue-prokrutchik.vue"
   },
   "files": [
-    "dist/*",
-    "src/*"
+    "vue-scroller.js",
+    "vue-scroller.browser.js",
+    "vue-scroller.d.ts",
+    "vue-scroller.css"
   ],
   "scripts": {
     "build": "npm run build:browser & npm run build:module",
