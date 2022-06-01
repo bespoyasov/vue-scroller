@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: ".",
     lib: {
-      entry: "./index.js",
+      entry: "./vue-scroller.vue",
       name: "Scroller",
       fileName: (format) => `vue-scroller.${format}.js`,
     },
