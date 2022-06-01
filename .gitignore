@@ -8,3 +8,8 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Built files
+style.css
+vue-scroller.es.js
+vue-scroller.umd.js
