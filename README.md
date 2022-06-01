@@ -8,45 +8,43 @@ Vue wrapper component for [Scroller](https://github.com/bespoyasov/scroller).
 
 ## Usage
 
-```javascript
-// in <script>:
-import VueProkrutchik from 'vue-prokrutchik'
+```js
+import { Scroller } from "vue-prokrutchik";
 
 export default {
   components: {
-    scroller: VueProkrutchik,
+    Scroller,
   },
   data() {
     return {
-      config: {
-        scrollbar: 'hidden',
-        anchors: 'hidden',
+      position: 150,
+      duration: 250,
+
+      scrollbar: "visible",
+      navigation: "visible",
+      align: "center",
+
+      onItemClick: (event) => {
+        /* event is Touch event or MouseEvent */
       },
-    }
+    };
   },
-  methods: {
-    updateScroller() {
-      this.config = {
-        ...this.config,
-        scrollbar: 'visible',
-        anchors: 'visible',
-      }
-    },
-  },
-  mounted() {
-    setTimeout(this.updateScroller, 2500)
-  },
-}
+};
 ```
 
 ```html
-<!-- in <template>: -->
 <template>
-  <scroller :config="config">
-    <!-- or <scroller data-scrollbar="hidden" data-anchors="hidden"> -->
-    <div class="item" v-for="i in 15" :key="`scroller-item-${i}`" :data-anchor="`item-${i}`">
-      Content item #{{ i }}
-    </div>
+  <scroller
+    :position="position"
+    :duration="duration"
+    :scrollbar="scrollbar"
+    :navigation="navigation"
+    :align="align"
+    :onItemClick="onItemClick"
+  >
+    <div class="item" data-anchor="First">First Item</div>
+    <div class="item" data-anchor="Second">Second Item</div>
+    <div class="item" data-anchor="Third">Third Item</div>
   </scroller>
 </template>
 ```
