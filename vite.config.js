@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: ".",
     lib: {
       entry: "./index.js",
-      name: "VueScroller",
+      name: "Scroller",
       fileName: (format) => `vue-scroller.${format}.js`,
     },
     rollupOptions: {
