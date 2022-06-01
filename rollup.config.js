@@ -8,7 +8,6 @@ export default {
   plugins: [
     vue({
       css: true,
-      compileTemplate: true,
       template: {
         isProduction: true,
       },
