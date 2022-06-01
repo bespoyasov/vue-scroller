@@ -13,7 +13,6 @@ declare module "vue-prokrutchik" {
     onItemClick: (e: MouseEvent | TouchEvent) => void;
   };
 
-  export interface VueScrollerConstructor extends Vue.VueConstructor {
-    props: VueScrollerProps;
-  }
+  const Scroller: Vue.DefineComponent<VueScrollerProps>;
+  export default Scroller;
 }
