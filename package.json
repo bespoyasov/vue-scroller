@@ -11,11 +11,13 @@
   ],
   "author": "Alex Bespoyasov <bespoyasov@me.com>",
   "repository": "bespoyasov/vue-scroller",
-  "main": "dist/vue-prokrutchik.umd.js",
-  "module": "dist/vue-prokrutchik.esm.js",
-  "unpkg": "dist/vue-prokrutchik.min.js",
-  "browser": {
-    "./sfc": "src/vue-prokrutchik.vue"
+  "module": "vue-scroller.js",
+  "browser": "vue-scroller.browser.js",
+  "exports": {
+    ".": "./vue-scroller.js",
+    "./package.json": "./package.json",
+    "./styles.css": "./vue-scroller.css",
+    "./browser.js": "./vue-scroller.browser.js"
   },
   "files": [
     "vue-scroller.js",
