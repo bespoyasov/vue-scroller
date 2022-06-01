@@ -16,21 +16,19 @@
   "browser": "vue-scroller.browser.js",
   "style": "vue-scroller.css",
   "exports": {
-    ".": "./vue-scroller.js",
+    ".": "./vue-scroller.es.js",
+    "./browser.js": "./vue-scroller.umd.js",
     "./package.json": "./package.json",
-    "./styles.css": "./vue-scroller.css",
-    "./browser.js": "./vue-scroller.browser.js"
+    "./style.css": "./style.css"
   },
   "files": [
-    "vue-scroller.js",
-    "vue-scroller.browser.js",
+    "vue-scroller.es.js",
+    "vue-scroller.umd.js",
     "vue-scroller.d.ts",
-    "vue-scroller.css"
+    "style.css"
   ],
   "scripts": {
-    "build": "npm run build:browser & npm run build:module",
-    "build:module": "rollup --format es --file vue-scroller.js",
-    "build:browser": "rollup --format iife --file vue-scroller.browser.js"
+    "build": "vite build"
   },
   "peerDependencies": {
     "prokrutchik": "^3.0.1",
