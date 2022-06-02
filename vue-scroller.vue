@@ -7,6 +7,7 @@ import { h } from "vue";
 import { Scroller } from "prokrutchik";
 
 export default {
+  name: "Scroller",
   props: {
     position: [String, Number],
     duration: Number,
