@@ -4,7 +4,7 @@ Vue wrapper component for [Scroller](https://github.com/bespoyasov/scroller).
 
 ## Installation
 
-`npm install prokrutchik vue-prokrutchik`
+`npm install vue-prokrutchik`
 
 ## Usage
 

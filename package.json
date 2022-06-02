@@ -32,8 +32,10 @@
   "scripts": {
     "build": "vite build"
   },
+  "dependencies": {
+    "prokrutchik": "^3.0.1"
+  },
   "peerDependencies": {
-    "prokrutchik": "^3.0.1",
     "vue": "^3.2.36"
   },
   "devDependencies": {
