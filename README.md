@@ -9,7 +9,7 @@ Vue wrapper component for [Scroller](https://github.com/bespoyasov/scroller).
 ## Usage
 
 ```js
-import { Scroller } from "vue-prokrutchik";
+import Scroller from "vue-prokrutchik";
 
 export default {
   components: {
