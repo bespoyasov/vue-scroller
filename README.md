@@ -8,31 +8,31 @@ Vue wrapper component for [Scroller](https://github.com/bespoyasov/scroller).
 
 ## Usage
 
-```js
-import Scroller from "vue-prokrutchik";
-
-export default {
-  components: {
-    Scroller,
-  },
-  data() {
-    return {
-      position: 150,
-      duration: 250,
-
-      scrollbar: "visible",
-      navigation: "visible",
-      align: "center",
-
-      onItemClick: (event) => {
-        /* event is Touch event or MouseEvent */
-      },
-    };
-  },
-};
-```
-
 ```html
+<script>
+  import Scroller from "vue-prokrutchik";
+
+  export default {
+    components: {
+      Scroller,
+    },
+    data() {
+      return {
+        position: 150,
+        duration: 250,
+
+        scrollbar: "visible",
+        navigation: "visible",
+        align: "center",
+
+        onItemClick: (event) => {
+          /* event is Touch event or MouseEvent */
+        },
+      };
+    },
+  };
+</script>
+
 <template>
   <scroller
     :position="position"
