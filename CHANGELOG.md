@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.1
+
+Specified the package license (MIT).
+
 ## v2.0.0
 
 Dependency and code refreshment, new component public API.
