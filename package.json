@@ -11,6 +11,7 @@
   ],
   "author": "Alex Bespoyasov <bespoyasov@me.com>",
   "repository": "bespoyasov/vue-scroller",
+  "license": "MIT",
   "type": "module",
   "types": "vue-scroller.d.ts",
   "module": "vue-scroller.js",
